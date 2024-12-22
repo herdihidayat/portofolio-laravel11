@@ -10,6 +10,14 @@ Route::get('/about', function () {
     return view('about', ['nama' => 'Herdin Hidayat']);
 });
 
+Route::get('/blog', function () {
+    return view('blog');
+});
+
+Route::get('/contact', function () {
+    return view('contact');
+});
+
 // buat 2 route baru
 // 1. /blog
 // 2 buah artikel, judul dan isi
