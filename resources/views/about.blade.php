@@ -11,7 +11,9 @@
 
 <body>
     <a href="/">Home</a>
+    <a href="/blog">Blog</a>
     <a href="/about">About</a>
+    <a href="/contact">contact</a>
     <h1>about</h1>
     <h3>Owner: {{ $nama }}</h3>
     <img src="img/CV Herdin.jpg" alt="Herdin" width="100">

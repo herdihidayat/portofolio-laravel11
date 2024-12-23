@@ -9,6 +9,10 @@
 </head>
 
 <body>
+    <a href="/">Home</a>
+    <a href="/blog">Blog</a>
+    <a href="/about">About</a>
+    <a href="/contact">contact</a>
     <h1>Halaman Blog</h1>
     <article>
         <h3>Judul 1</h3>
