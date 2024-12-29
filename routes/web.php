@@ -7,7 +7,7 @@ Route::get('/', function () {
 });
 
 Route::get('/about', function () {
-    return view('about', ['nama' => 'Herdin Hidayat']);
+    return view('about', ['name' => 'Herdin Hidayat', 'title' => 'About']);
 });
 
 Route::get('/blog', function () {
@@ -15,7 +15,7 @@ Route::get('/blog', function () {
 });
 
 Route::get('/contact', function () {
-    return view('contact');
+    return view('contact', ['title' => 'Contact']);
 });
 
 // buat 2 route baru
