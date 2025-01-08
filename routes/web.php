@@ -13,12 +13,13 @@ Route::get('/about', function () {
 Route::get('/posts', function () {
     return view('posts', ['title' => 'Blog', 'posts' => [
         [
+            'id' => '1',
             'title' => 'Judul Artikel 1',
             'author' => 'Herdin Hidayat',
             'body' => 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime voluptates et dolorum. Culpa, ad? At quaerat beatae saepe a. Omnis optio neque voluptatem quae modi, nobis ea placeat cum architecto.'
         ],
         [
-
+            'id' => '2',
             'title' => 'Judul Artikel 2',
             'author' => 'Herdin Hidayat',
             'body' => 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime voluptates et dolorum. Culpa, ad? At quaerat beatae saepe a. Omnis optio neque voluptatem quae modi, nobis ea placeat cum architecto.'
