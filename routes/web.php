@@ -15,12 +15,14 @@ Route::get('/posts', function () {
     return view('posts', ['title' => 'Blog', 'posts' => [
         [
             'id' => '1',
+            'slug' => 'judul-artikel-1',
             'title' => 'Judul Artikel 1',
             'author' => 'Herdin Hidayat',
             'body' => 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime voluptates et dolorum. Culpa, ad? At quaerat beatae saepe a. Omnis optio neque voluptatem quae modi, nobis ea placeat cum architecto.'
         ],
         [
             'id' => '2',
+            'slug' => 'judul-artikel-2',
             'title' => 'Judul Artikel 2',
             'author' => 'Herdin Hidayat',
             'body' => 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime voluptates et dolorum. Culpa, ad? At quaerat beatae saepe a. Omnis optio neque voluptatem quae modi, nobis ea placeat cum architecto.'
@@ -29,25 +31,30 @@ Route::get('/posts', function () {
     ]]);
 });
 
-Route::get('/posts/{id}', function ($id) {
+Route::get('/posts/slug}', function ($slug) {
     $posts = [
         [
             'id' => '1',
+            'slug' => 'judul-artikel-1',
             'title' => 'Judul Artikel 1',
             'author' => 'Herdin Hidayat',
             'body' => 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime voluptates et dolorum. Culpa, ad? At quaerat beatae saepe a. Omnis optio neque voluptatem quae modi, nobis ea placeat cum architecto.'
         ],
         [
             'id' => '2',
+            'slug' => 'judul-artikel-2',
             'title' => 'Judul Artikel 2',
             'author' => 'Herdin Hidayat',
             'body' => 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime voluptates et dolorum. Culpa, ad? At quaerat beatae saepe a. Omnis optio neque voluptatem quae modi, nobis ea placeat cum architecto.'
 
         ]
     ];
-    $post = Arr::first($posts, function ($post) use ($id) {
-        return $post['id'] == $id;
+
+    $post = Arr::first($posts, function ($post) use ($slug) {
+        return $post['slug'] == $slug;
     });
+
+    return view('post', ['title' => 'Singel Post', 'post' => $post]);
 });
 
 Route::get('/contact', function () {
