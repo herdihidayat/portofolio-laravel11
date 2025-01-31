@@ -15,8 +15,8 @@ class CategorySeeder extends Seeder
     {
         // Category::factory(3)->create();
         Category::create([
-            'name' => 'Web Design',
-            'slug' => 'web-design',
+            'name' => 'Perduniawian',
+            'slug' => 'perduniawian',
             'color' => 'red'
         ]);
         Category::create([

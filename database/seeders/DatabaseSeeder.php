@@ -32,17 +32,27 @@ class DatabaseSeeder extends Seeder
 
         // Post::create([
         //     'title' => 'Judul Artikel 1',
-        //     'author_id' => 1,
-        //     'category_id' => 1,
+        //     'author_id' => '1',
+        //     'category_id' => '1',
         //     'slug' => 'judul-artikel-1',
         //     'body' => 'Whether you are new to PHP web frameworks or have years of experience, Laravel is a framework that can grow with you. Well help you take your first steps as a web developer or give you a boost as you take your expertise to the next level. We cant wait to see what you build.'
         // ]);
 
-        $this->call([CategorySeeder::class, UserSeeder::class]);
+        // User::create([
+        //     'name' => 'Herdin Hidayat',
+        //     'username' => 'herdinhidayat',
+        //     'email' => 'hidayatyaa@gmail.com',
+        //     'email_verified_at' => now(),
+        //     'password' => Hash::make('password'),
+        //     'remember_token' => Str::random(10)
+        // ]);
 
-        Post::factory(100)->recycle([
-            Category::all(),
-            User::all()
-        ])->create();
+        $this->call([CategorySeeder::class, UserSeeder::class, PostSeeder::class]);
+
+        // Post::factory()->recycle([
+        //     Category::all(),
+        //     Post::all(),
+        //     User::all()
+        // ])->create();
     }
 }
